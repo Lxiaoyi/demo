@@ -1,11 +1,13 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.dto.StudentDto;
 import com.example.demo.mapper.StudentMapper;
 import com.example.demo.model.Student;
 import com.example.demo.model.StudentExample;
 import com.example.demo.service.StudentManagerService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.util.StringUtil;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,4 +27,13 @@ public class StudentManagerServiceImpl implements StudentManagerService {
         }
         return studentMapper.selectByExample(studentExample);
     }
+
+    @Override
+    public int addStudent(StudentDto studentDto) {
+        Student student = new Student();
+        BeanUtils.copyProperties(studentDto, student);
+        return studentMapper.insert(student);
+    }
+
+
 }
