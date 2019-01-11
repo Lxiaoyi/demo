@@ -1,6 +1,7 @@
 package com.example.demo.dto;
 
 import com.github.pagehelper.PageInfo;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Map;
 /**
  * 调用返回对象
  */
+@Data
 public class CommonResult {
     public static final int SUCCESS = 0;
     public static final int FAILED = 1;
@@ -64,29 +66,5 @@ public class CommonResult {
         this.code = VALIDATE_FAILED;
         this.message = message;
         return this;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
     }
 }
