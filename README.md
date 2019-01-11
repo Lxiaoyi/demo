@@ -5,5 +5,5 @@
 2. mysql中新建数据库，执行**document/sql**下的**student.sql**文件
 3. 更改**application.properties** 文件中数据库配置
 4. 运行 DemoApplication
-5. 打开浏览器输入以下地址即可进行调试 `http://localhost:8080/swagger-ui.html`
+5. 打开浏览器输入以下地址即可进行调试 `http://localhost:8081/swagger-ui.html`
 6. 前台demo传送门：[myvuedemo](https://github.com/Lxiaoyi/myvuedemo)
